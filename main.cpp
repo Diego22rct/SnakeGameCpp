@@ -8,13 +8,12 @@ using namespace System;
 
 #include "Juego.h"
 
-//deficion de los controles con el teclado(flechas)
-#define arriba 72
-#define abajo 80
-#define izquierda 75
-#define derecha 77
 
 void main(){
-	bool gameover=false;
+	srand(time(NULL));
+	Console::SetWindowSize(100, 40);
+	Console::CursorVisible = false;
 	CGame* game = new CGame();
+	game->gameloop();
+	_getch();
 }
